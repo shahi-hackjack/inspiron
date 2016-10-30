@@ -197,6 +197,13 @@ else{
 app.post('/update',function(req,res){
 
 console.log("IAMINUPDATESERVER"+req.body.EventName);
+       console.log(req.body.EventOrganiser3);
+          if(typeof(req.body.EventOrganiser3)=='undefined')
+     {
+      console.log("m inside");
+      req.body.EventOrganiser3='';
+      req.body.EventContact3='';
+     }
 
 eventd.update({ _id:req.body._id}, { $set: { EventName:req.body.EventName,
     _id:req.body._id,
