@@ -1,0 +1,29 @@
+{
+  "name": "inspiron",
+  "version": "1.0.0",
+  "description": "it is an  portal for storing event into database",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express-session": "^1.14.1",
+    "http": "0.0.0",
+    "mongoose": "^4.6.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/git/shahi-hackjack.git"
+  },
+  "keywords": [
+    "single",
+    "page",
+    "portal"
+  ],
+  "author": "mohammad shahenoor",
+  "license": "ISC"
+}

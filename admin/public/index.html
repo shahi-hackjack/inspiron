@@ -1,0 +1,282 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+ 
+  <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/cookie.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="./js/js.js" type="text/javascript">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+<script src="controllers/controller.js" type="text/javaScript">
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+    
+<div id="outer1">
+    <div class="container-fluid  main1">
+ <div class="row ">
+<div class="col-md-2"></div>
+  <div class="col-md-8" ng-controller="AppCtrl">
+     
+      <div id="pic">
+        <div id="logo">
+            <h1>Event Ideas Pitcher's POrtal </h1>
+        </div>
+         
+        </div>
+    
+                   
+      <div id="form">
+       <div id="navi">
+           
+           <a href="#" id="Register">Register |</a>
+           <a href="#" id="Login">Login</a>
+      </div>
+      
+      <div id="form1" >
+        
+     <form>
+          
+            <div class="inner-addon left-addon">
+       <i class="glyphicon glyphicon-user"></i>  
+          <input type="text" class="email" placeholder="Name" required="" ng-model="user.Name"
+           name="Name"/>
+          </div>
+        
+           
+        <div class="inner-addon left-addon">
+       <i class="glyphicon glyphicon-envelope"></i>   
+         <input type="text" class="email" name="Email" placeholder="Email" required="" ng-model="user.Email"/>        
+          
+        </div>
+          <div class="inner-addon left-addon">
+       <i class="glyphicon glyphicon-earphone"></i> 
+         <input type="text" class="email" name="Phoneno" placeholder="Phone Number" required="" ng-model="user.Phoneno"/>  </div> 
+         
+       <div class="inner-addon left-addon">
+       <i class="glyphicon  glyphicon-eye-open"></i>
+       <input type="password" class="branch" name="Password" placeholder="Password" required="" ng-model="user.Password"/></div>
+        <input type="submit" class="btn btn-info" value="Register" ng-click="register()"/>  
+     </form>
+      
+
+   </div>
+      <div id="form2" >
+      <form>
+    <div class="inner-addon left-addon">
+       <i class="glyphicon glyphicon-envelope"></i>   
+         <input type="text" class="email" placeholder="Email" name="email" required="" ng-model="log.Email"/>        
+          
+        </div>
+          <div class="inner-addon left-addon">
+       <i class="glyphicon glyphicon-earphone"></i> 
+         <input type="password" class="email" placeholder="Password" name="password" required="" ng-model="log.Password"/>  </div> 
+         
+
+         <input type="submit" class="btn btn-info" value="Pitch Idea" ng-click="login()"/>
+         
+      </form>
+ <div id="green">
+ 
+ </div>
+
+ <div id="red">
+ 
+ </div> 
+
+        </div>
+
+      </div>
+   
+
+
+
+</div>
+   
+
+  <div class="col-md-2"></div>
+
+ </div>
+
+</div>
+</div>
+
+
+
+
+
+<div id="outer2" >
+<div class="container-fluid main2" ng-controller="Ctrl" >
+ 
+<div class="row"> 
+<div class="col-md-2" id="">
+
+  <button id="datalink" class="btn " ng-click="Load()">EVENT</button>
+  <button id="formlink" class="btn " ng-click="FORM()">FORM</button>
+ 
+
+</div>
+<div class="col-md-8" id="">
+<div id="contact">
+  <h3 id="heading">Inspiron 16.0 Organiser's Panel</h3>
+  <hr>
+
+<div id="event1">
+<form>
+     
+        
+    <input type="text" ng-model="Event.EventName" placeholder="Event Name" required/>
+         <input type="text" ng-model="Event.TeamSize" placeholder="Team Size" required /><br>
+<textarea  ng-model="Event.EventDescription" placeholder="Description" rows="4" required>
+        </textarea>
+       
+       <input type="text" ng-model="Event.EventOrganiser1" placeholder="Organiser 1" required />
+      <input type="text" ng-model="Event.EventContact1" placeholder="Contact 1" required />
+        <input type="text" ng-model="Event.EventOrganiser2" placeholder="Organiser 2" required />
+      <input type="text" ng-model="Event.EventContact2" placeholder="Contact 2" required />
+         <input type="text" ng-model="Event.EventOrganiser3" placeholder="Organiser 3(Optional)"/>
+      <input type="text" ng-model="Event.EventContact3" placeholder="Contact 3(Optional)"/>
+        <br>
+
+
+
+    <input type="submit" value="Pitch" class="btn btn-info" ng-click="Pitch()"/><br><br>
+
+  </form>
+</div>
+
+<div id="event4">
+<div id="table2">
+<table  ng-repeat="(x,y) in ED" ng-if="(x!='__v')">
+  
+ <tr  ng-if="x!='_id'">
+        <td id="t1"> {{x}} : </td>
+        <td id="t2">{{y}}</td> 
+         
+         
+    </tr>
+    
+</table>
+<input type="submit" id="edbt"  value="Edit" class="btn btn-warning" ng-click="Edit()"/>
+
+</div>
+
+
+</div>
+
+<div id="event3" >
+
+<form>
+     
+        
+    <input type="text" ng-model="Event.EventName" placeholder="Event Name" required/>
+        <input type="text" ng-model="Event.TeamSize" placeholder="Team Size" required /><br>
+        <textarea  ng-model="Event.EventDescription" placeholder="Description" rows="4" required></textarea>
+       <input type="text" ng-model="Event.EventOrganiser1" placeholder="Organiser 1" required />
+      <input type="text" ng-model="Event.EventContact1" placeholder="Contact 1" required />
+        <input type="text" ng-model="Event.EventOrganiser2" placeholder="Organiser 2" required />
+      <input type="text" ng-model="Event.EventContact2" placeholder="Contact 2" required />
+         <input type="text" ng-model="Event.EventOrganiser3" placeholder="Organiser 3(Optional)"/>
+      <input type="text" ng-model="Event.EventContact3" placeholder="Contact 3(Optional)"/>
+        <br>
+    <input type="submit" value="Update" class="btn btn-success" ng-click="Update()"/><br><br>
+
+  </form>
+
+</div>
+
+<div id="event2">
+<div id="table1">
+<table id="admintable" cellspacing="10" ng-repeat="x in ED" >
+  
+ <tr>
+        <td id="e1"> EventName :</td>
+        <td id="e2">{{x.EventName}} </td>
+         <td id="e1">TeamSize :</td>
+         <td id="e2">{{x.TeamSize}}</td> 
+</tr>
+
+<tr>
+    <td id="e1">EventOrganiser1:</td>
+  <td id="e2">{{x.EventOrganiser1}}</td> 
+      <td id="e1">EventContact1:</td>
+  <td id="e2">{{x.EventContact1}}</td> 
+  </tr>
+
+<tr>
+    <td id="e1">EventOrganiser2:</td>
+  <td id="e2">{{x.EventOrganiser2}}</td> 
+    <td id="e1">EventContact2:</td>
+  <td id="e2">{{x.EventContact2}}</td> 
+  </tr>
+
+<tr>
+    <td id="e1">EventOrganiser3:</td>
+  <td id="e2">{{x.EventOrganiser3}}</td> 
+    <td id="e1">EventContact3:</td>
+  <td id="e2">{{x.EventContact3}}</td> 
+  </tr>
+<tr>
+   <td id="e1">EventDescription:</td>
+  <td id="e2" colspan="3">{{x.EventDescription}} </td> 
+</tr>
+<tr>
+  <td></td>
+  <td colspan=3 id="btns" align="center"> 
+   <button class="btn btn-success" ng-click="change(x._id)">UPDATE</button>
+    <button class="btn btn-danger" ng-click="delete(x._id)">DELETE</button></td>
+</tr>  
+  
+</table>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-2">
+<button id="Logout" class="btn" ng-click="logout()">LOGOUT</button>
+<br>
+
+</div>
+
+
+</div>
+</div>
+</div>
+ 
+</body>
+</html>
